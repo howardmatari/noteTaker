@@ -14,6 +14,7 @@ class Notes {
   write(note) {
     return writeFileAsync("db/db.json", JSON.stringify(note));
   }
+  //test getAllNotes in postman
   getAllNotes(){
       return this.read().then((notes) => {
         var readNotes;
@@ -53,5 +54,5 @@ class Notes {
 
 const myNote = new Notes();
 
-module.exports = myNote;
+module.exports = Notes;
 

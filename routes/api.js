@@ -1,8 +1,9 @@
 const router=require("express").Router();
 const notes = require("../db/notes.js");
 
-router.get("/api/notes", (req, res) => {
+router.get("/api/notes",(req, res) => {
     notes.getAllNotes().then((notes) => res.json(notes)).catch(err => res.status(500).json(err))
+    console.log(getAllNotes);
 })
 router.post("/api/notes",(req, res)=>{
     notes.addNote(req.body).then((note) => res.json(note)).catch(err => res.status(500).json(err))
