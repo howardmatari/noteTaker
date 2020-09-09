@@ -1,6 +1,6 @@
 const express=require ("express");
-const apiRoutes=require("./routes/api")
-const htmlRoutes=require("./routes/html")
+const apiRoutes=require("./routes/api");
+const htmlRoutes=require("./routes/html");
 
 var app = express();
 var PORT = 3000;
