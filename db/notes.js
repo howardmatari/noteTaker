@@ -1,6 +1,6 @@
 const fs = require("fs");
 const util = require("util");
-const myNote = new Notes();
+
 const uuidv1 = require("uuid/v1")
 //const fs = require(“fs”)
 const readFileAsync = util.promisify(fs.readFile);
@@ -51,7 +51,7 @@ class Notes {
 
 
 
-
+const myNote = new Notes();
 
 module.exports = myNote;
 
