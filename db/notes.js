@@ -2,7 +2,8 @@ const fs = require("fs");
 const util = require("util");
 const path = require("path");
 
-const uuidv1 = require("uuid")
+const { v1: uuidv1 } = require("uuid")
+//const uuidv1 = require("uuid")
 //const fs = require(“fs”)
 const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
