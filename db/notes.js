@@ -1,5 +1,6 @@
 const fs = require("fs");
 const util = require("util");
+const path = require("path");
 
 const uuidv1 = require("uuid")
 //const fs = require(“fs”)
@@ -8,11 +9,11 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 class Notes {
   read() {
-    return readFileAsync("db/db.json", "utf8");
+    return readFileAsync(path.join(__dirname,"db.json"), "utf8");
   }
 
   write(note) {
-    return writeFileAsync("db/db.json", JSON.stringify(note));
+    return writeFileAsync(path.join(__dirname,"db.json"), JSON.stringify(note));
   }
   //test getAllNotes in postman
   getAllNotes(){
@@ -54,5 +55,5 @@ class Notes {
 
 const myNote = new Notes();
 
-module.exports = Notes;
+module.exports = myNote;
 
